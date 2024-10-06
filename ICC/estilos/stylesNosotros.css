@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    font-size: 62.5%; /* 1rem = 10px, facilita el cálculo (10px/16px = 62.5%) */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2rem; /* 20px */
+}
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8.5rem; /* 85px */
+    padding: 0.5rem 10%;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img {
+    height: 7rem; /* 70px */
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header .nav-links li {
+    display: inline-block;
+    padding: 0 2rem; /* 20px */
+}
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-weight: 700;
+    color: #eceff1;
+    text-decoration: none;    
+}
+
+.header .nav-links li a:hover {
+    color: #9e9d9d;
+}
+
+header {
+    width: 100%;
+    height: 650px;
+    background-image: url(/img/fondo\ pagina\ web\ iglesia.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+header .textos {
+    margin-top: 152px;
+}
+
+header .titulo {
+    font-size: 8.5rem; /* 85px */
+    text-shadow: 5px 0px 2px rgba(248, 248, 248, 0.7); 
+}
+
+header .subtitulo {
+    font-size: 4.2rem; /* 42px */
+    font-weight: 300;
+    margin-bottom: 32px;
+    text-shadow: 2px 2px 2px rgba(248, 248, 248, 0.7); 
+}
+
+.sesgoabajo,
+.sesgoarriba {
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    border-style: solid;
+    border-color: transparent transparent transparent;
+}
+
+.sesgoabajo {
+    bottom: 0;
+    border-width: 0 0 35vh 100vw;
+}
+
+.sesgoarriba {
+    top: 0;
+    border-width: 35vh 100vw 0 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+}
+
+.sobre-nosotros {
+    text-align: center;
+    font-size: 5.6rem; /* 56px */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.slogan {
+    font-size: 2.4rem; /* 24px */
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.parrafo {
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 24px;
+    color: rgb(24, 16, 16);
+}
+
+.galeria {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.imagenes {
+    width: 20%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: black;
+    margin: auto;
+    padding: 0.5rem;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    padding: 25px;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: cornflowerblue;
+}
+
+/* Media Queries para Responsive Design */
+
+@media screen and (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .header .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .header .nav-links li {
+        padding: 1rem 0; /* 10px */
+        width: 100%;
+        text-align: center;
+    }
+
+    .header .logo img {
+        height: 5.5rem; /* 55px */
+    }
+
+    .contenedor {
+        padding: 32px 0;
+    }
+
+    .galeria {
+        height: auto;
+    }
+
+    .imagenes {
+        width: 50%;
+        height: auto;
+    }
+
+    header .textos {
+        margin-top: 130px;
+    }
+
+    header .titulo {
+        font-size: 7.5rem; /* 75px */
+    }
+}
+
+@media screen and (max-width: 610px) {
+    header .textos {
+        margin-top: 130px;
+    }
+
+    header .titulo {
+        font-size: 6.5rem; /* 65px */
+    }
+
+    header .subtitulo {
+        font-size: 3rem; /* 30px */
+        margin-bottom: 24px;
+    }
+
+    .sobre-nosotros {
+        font-size: 4.5rem; /* 45px */
+    }
+
+    .slogan {
+        font-size: 2rem; /* 20px */
+    }
+
+    .imagenes {
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .cliente {
+        width: 90%;
+        height: 200px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    header .textos {
+        margin-top: 100px;
+    }
+
+    header .titulo {
+        font-size: 5.5rem; /* 55px */
+    }
+
+    header .subtitulo {
+        font-size: 2.5rem; /* 25px */
+        margin-bottom: 20px;
+    }
+
+    .sobre-nosotros {
+        font-size: 4rem; /* 40px */
+    }
+
+    .slogan {
+        font-size: 1.8rem; /* 18px */
+    }
+
+    .titulo-patrocinadores {
+        font-size: 4rem; /* 40px */
+    }
+
+    .subtitulo-patrocinadores {
+        font-size: 1.8rem; /* 18px */
+    }
+}
